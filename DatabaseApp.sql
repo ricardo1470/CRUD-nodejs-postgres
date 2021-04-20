@@ -18,10 +18,3 @@ CREATE DATABASE dataBasePortalEducativo; WITH OWNER postgres;
 
 -- describe table
 -- \d nametable
-\d admins
-\d company
-\d jobpost
-\d users
-\d webpages
-
-SELECT title, location, company, date, link, senorityLevel, place, jobFunction, employmenttype, industries, description, voteup FROM jobpost WHERE voteup > 20 ORDER BY voteup DESC;
