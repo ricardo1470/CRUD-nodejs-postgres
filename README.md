@@ -6,7 +6,7 @@
 ## Install PostgreSQL
 * `sudo apt update`
 * `sudo apt install postgresql postgresql-contrib`
-* `sudo service postgresql start [stop, status, reload]`
+* `sudo service postgresql start [stop, status, reload, restart]`
 
 ## start postgres shell
 * `psql -h localhost -U postgres, sudo -u postgres psql`

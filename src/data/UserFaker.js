@@ -10,11 +10,11 @@ function userData() {
     for (let id = 1 ; id <= 200 ; id++)
     {
         /* create name */
-        const firstNane = faker.name.firstName();
+        const firstname = faker.name.firstName();
         /* create last name */
-        const lastName = faker.name.lastName();
+        const lastname = faker.name.lastName();
         /* create phone number */
-        const phoneNumber = faker.phone.phoneNumber();
+        const phonenumber = faker.phone.phoneNumber();
         /* create addres */
         const address = faker.address.direction();
         const city = faker.address.city();
@@ -23,9 +23,9 @@ function userData() {
         const email = faker.internet.email();
 
         user.push({
-            firstNane: firstNane,
-            lastName: lastName,
-            phoneNumber: phoneNumber,
+            firstname: firstname,
+            lastname: lastname,
+            phonenumber: phonenumber,
             address: address,
             city: city,
             country: country,
