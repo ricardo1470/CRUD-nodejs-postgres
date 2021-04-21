@@ -18,22 +18,23 @@ const pool = new Pool({
 /* function that reads file userDataGenerate  and stores
     it in the database, returns a json object with
     the data obtained */
+
 const storeFileIntoDB = async (res, req) => {
     try {
-        const rawdata = fs.readFileSync('../PortalEducativo/src/data/userDataGenerate.json');
+        const openfile =fs.openSync('src/data/userDataGenerate.json');
+        const rawdata = fs.readFileSync(openfile);
         const jobs = JSON.parse(rawdata);
 
-        for (const user of jobs) {
-        const { firtName, lastName, phoneNumber, address, city, country, email } = user;
-        const response = await pool.query('INSERT INTO jobpost (firtName, lastName, phoneNumber, address, city, country, email) VALUES ($1, $2, $3, $4, $5, $6, $7)', [firtName, lastName, phoneNumber, address, city, country, email]);
-        console.log(response);
-    }
+        for (const job of jobs) {
+            const { firtName, lastName, phoneNumber, address, city, country, email } = job;
+            const response = await pool.query('INSERT INTO jobpost (firtName, lastName, phoneNumber, address, city, country, email) VALUES ($1, $2, $3, $4, $5, $6, $7)', [firtName, lastName, phoneNumber, address, city, country, email]);
+            console.log(response);
+        }
     } catch (error) {
         console.log(error);
     }
 };
 
-  /* export functions */
 module.exports = {
     storeFileIntoDB
 };

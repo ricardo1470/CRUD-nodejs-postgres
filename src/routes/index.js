@@ -5,13 +5,22 @@ const router = Router();
 
 /* init */
 const { getinit } = require('../controllers/init')
-/* user data */
-const { storeFileIntoDB } = require('../controllers/user');
+const { storeFileIntoDB } = require('../controllers/dataUser');
+/*users */
+const { getusers, createuser, getuserbyid, updateuser, deleteuser, deleteallusers } = require('../controllers/users');
 
 /* init */
 router.get('/', getinit);
-/* data */
+
 router.get('/data', storeFileIntoDB);
+
+/*users */
+router.get('/users', getusers);
+router.get('/users/:id', getuserbyid);
+router.post('/users', createuser);
+router.put('/users/:id', updateuser);
+router.delete('/users/:id', deleteuser);
+router.delete('/users', deleteallusers);
 
 
 module.exports = router;
