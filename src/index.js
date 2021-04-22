@@ -3,6 +3,7 @@
 
 /* import express */
 const express = require('express');
+const { urlencoded } = require('express');
 /* import cors */
 var cors = require('cors');
 /* import morgan */
@@ -11,10 +12,10 @@ const morgan =  require("morgan");
 const path = require('path');
 /* import http-errors */
 var createError = require('http-errors');
-
 /* port assignment */
 const port = 9000 || process.env.PORT;
 
+const routesProject = require('./routes/index');
 /* eject express */
 const app = express();
 
@@ -29,9 +30,12 @@ app.set('view engine', 'ejs');
 /* middlewares */
 app.use(cors());
 app.use(express.json());
+/* receive information from the form */
+app.use(express.urlencoded({ extended: false }))
 
 /* routes */
-app.use(require('./routes/index'))
+//app.use(require('./routes/index'))
+app.use('/', routesProject);
 
 /* static files */
 app.use(express.static(path.join(__dirname, 'public')));
