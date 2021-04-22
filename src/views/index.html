@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- title -->
-    <title><%= title%></title>
-    <!-- end title-->
+<!-- head -->
+<%- include('partials/head.html') %>
 </head>
 <body>
     <div>
+        <%- include('partials/nav.html') %>
         <h3>Update User</h3>
-        <a href="/users" class="btn">users</a>
-        </form>
+        <hr>
+        <a href="/users" type="submit" class="btn btn-outline-primary" >Save User</a>
     </div>
 </body>
 </html>

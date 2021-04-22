@@ -23,9 +23,9 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'))
 /*configured to write html tag, to be rendered with ejs*/
 app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'ejs');
 /*Response Dev Status*/
 app.use(morgan('dev'));
-app.set('view engine', 'ejs');
 
 /* middlewares */
 app.use(cors());

@@ -42,9 +42,10 @@ const createuser = async (req, res) => {
 const updateuser = async (req, res) => {
     const id = req.params.id;
     const { firstname, lastname, phonenumber, address, city, country, email } = req.body;
-    const response = pool.query('UPDATE users SET firstname = $1, lastname = $2, phonenumber = $3, address = $4, city = $5, country = $6, email = $7 WHERE id = $8', [firstname, lastname, phonenumber, address, city, country, email]);
+    const response = pool.query('UPDATE users SET firstname = $1, lastname = $2, phonenumber = $3, address = $4, city = $5, country = $6, email = $7 WHERE id = $8', [firstname, lastname, phonenumber, address, city, country, email, id]);
     console.log(response);
     res.json('User Updated Successfully');
+    res.redirect('/')
 };
 
 const deleteuser = async (req, res) => {
