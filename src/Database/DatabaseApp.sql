@@ -11,6 +11,7 @@ CREATE DATABASE dataBaseTest;
 -- of your Postgres server.
 
 -- table for user
+DROP TABLE IF EXISTS users;
 CREATE TABLE IF NOT EXISTS users (
                             Id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
                             firstname VARCHAR(50) NOT NULL,

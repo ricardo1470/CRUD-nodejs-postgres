@@ -24,9 +24,12 @@ const storeFileIntoDB = async (res, req) => {
         const rawdata = fs.readFileSync('src/data/userDataGenerate.json');
         const users = JSON.parse(rawdata);
 
-        for (const user in users) {
-            const { firstname, lastname, phonenumber, address, city, country, email } = user;
-            const response = await pool.query('INSERT INTO users (firstname, lastname, phonenumber, address, city, country, email) VALUES ($1, $2, $3, $4, $5, $6, $7)', [firstname, lastname, phonenumber, address, city, country, email]);
+        for (const user of users.data) {
+            console.log(user);
+            const  {firstname, lastname, phonenumber, address, city, country, email} = user;
+            const response = await pool.query
+            ('INSERT INTO users (firstname, lastname, phonenumber, address, city, country, email) VALUES ($1, $2, $3, $4, $5, $6, $7)',
+            [firstname, lastname, phonenumber, address, city, country, email]);
             console.log(response);
         }
     } catch (error) {

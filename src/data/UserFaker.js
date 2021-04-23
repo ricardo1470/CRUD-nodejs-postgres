@@ -1,11 +1,11 @@
 #!/usr/bin/node
 
 /* import faker */
-const faker = require ('faker');
-const fs = require ('fs');
+const faker = require('faker');
+const fs = require('fs');
 
 function userData() {
-    let user = [];
+var user = [];
 
     for (let id = 1 ; id <= 200 ; id++)
     {
@@ -33,12 +33,17 @@ function userData() {
         })
     }
 
-    return { data : user };
+    return { data };
 
 }
 
 const userDataGenerate = userData();
-fs.writeFileSync('userDataGenerate.json', JSON.stringify(userDataGenerate, null, '\t'));
+fs.writeFileSync('userDataGenerate.json', JSON.stringify(userDataGenerate, 'utf8', '\t'), function (err) {
+    if (err) {
+        return console.log(err);
+    }
+    console.log("The data has successfully! View it at 'userDataGenerate.json'");
+});
 
 //function jobData () {
     //let jobs = [];
