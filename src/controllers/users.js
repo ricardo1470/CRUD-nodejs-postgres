@@ -27,18 +27,19 @@ const getuserbyid = async (req, res) => {
 };
 
 const createuser = async (req, res) => {
-    const { firstname, lastname, phonenumber, address, city, country, email } = req.body.user;
-    //console.log(req.body.user);
+    const { firstname, lastname, phonenumber, address, city, country, email } = req.body;
+    console.log(req.body);
     const response = await pool.query
     ('INSERT INTO users (firstname, lastname, phonenumber, address, city, country, email) VALUES ($1, $2, $3, $4, $5, $6, $7)',
     [firstname, lastname, phonenumber, address, city, country, email]);
     console.log(response.rows);
-    res.json({
-        message: 'User Added successfully',
-        body: {
-            user: { firstname, lastname, phonenumber, address, city, country, email }
-        }
-    })
+    res.render('users.html', { title: '@Ricardo1470' });
+    //res.json({
+    //    message: 'User Added successfully',
+    //    body: {
+    //        user: { firstname, lastname, phonenumber, address, city, country, email }
+    //    }
+    //})
 };
 
 const updateuser = async (req, res) => {
