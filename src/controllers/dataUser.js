@@ -9,10 +9,10 @@ const fs = require('fs');
 
 /* connection with the database */
 const pool = new Pool({
-    host: 'localhost',
-    user: 'postgres',
-    database: 'databasetest',
-    password: 'admin'
+    host: 'localhost' || 'ec2-54-167-152-185.compute-1.amazonaws.com',
+    user: 'postgres' || 'pdnofntdxgbymn',
+    database: 'databasetest' || 'd68rat9eifbpva',
+    password: 'admin' || 'ee557f99f15a489543b073eaf72798c9d9b26609ef1f218372b80540a89db051'
 });
 
 /* function that reads file userDataGenerate  and stores
