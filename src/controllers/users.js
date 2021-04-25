@@ -22,6 +22,7 @@ const getusers = async (req, res) => {
 const getuserbyid = async (req, res) => {
     const id = req.params.id;
     const response = await pool.query('SELECT * FROM users WHERE id = $1', [id]);
+    //res.render('users.html', { title: '@Ricardo1470' });
     res.json(response.rows);
     console.log(response.rows);
 };
@@ -29,9 +30,7 @@ const getuserbyid = async (req, res) => {
 const createuser = async (req, res) => {
     const { firstname, lastname, phonenumber, address, city, country, email } = req.body;
     console.log(req.body);
-    const response = await pool.query
-    ('INSERT INTO users (firstname, lastname, phonenumber, address, city, country, email) VALUES ($1, $2, $3, $4, $5, $6, $7)',
-    [firstname, lastname, phonenumber, address, city, country, email]);
+    const response = await pool.query('INSERT INTO users (firstname, lastname, phonenumber, address, city, country, email) VALUES ($1, $2, $3, $4, $5, $6, $7)',[firstname, lastname, phonenumber, address, city, country, email]);
     console.log(response.rows);
     res.render('users.html', { title: '@Ricardo1470' });
     //res.json({
@@ -45,7 +44,7 @@ const createuser = async (req, res) => {
 const updateuser = async (req, res) => {
     const id = req.params.id;
     const { firstname, lastname, phonenumber, address, city, country, email } = req.body;
-    const response = pool.query('UPDATE users SET firstname = $1, lastname = $2, phonenumber = $3, address = $4, city = $5, country = $6, email = $7 WHERE id = $8', [firstname, lastname, phonenumber, address, city, country, email, id]);
+    const response = await pool.query('UPDATE users SET firstname = $1, lastname = $2, phonenumber = $3, address = $4, city = $5, country = $6, email = $7 WHERE id = $8', [firstname, lastname, phonenumber, address, city, country, email, id]);
     res.render('users.html', { title: '@Ricardo1470' });
     console.log('User Updated Successfully', response);
     //res.json('User Updated Successfully');

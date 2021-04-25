@@ -12,6 +12,8 @@ const morgan =  require("morgan");
 const path = require('path');
 /* import http-errors */
 var createError = require('http-errors');
+/* favicon */
+var favicon = require('serve-favicon')
 /* port assignment */
 const port = 9000 || process.env.PORT;
 
@@ -32,7 +34,7 @@ app.use(cors());
 app.use(express.json());
 /* receive information from the form */
 app.use(express.urlencoded({ extended: false }))
-
+app.use(favicon(path.join(__dirname, 'public/images', 'favicon.ico')))
 /* routes */
 //app.use(require('./routes/index'))
 app.use('/', routesProject);

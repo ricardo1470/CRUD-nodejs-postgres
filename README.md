@@ -8,6 +8,9 @@
 * `sudo apt install postgresql postgresql-contrib`
 * `sudo service postgresql start [stop, status, reload, restart]`
 
+## rum server in dev
+* `npm run dev`
+
 ## start postgres shell
 * `psql -h localhost -U postgres, sudo -u postgres psql`
 * `pass= root`
@@ -23,8 +26,6 @@
 * `\dv`: List views
 * `\timing`: Show query timing stats
 
-## rum server in dev
-* `npm run dev`
 ---
 
 ## License

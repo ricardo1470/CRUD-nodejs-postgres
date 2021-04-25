@@ -14,13 +14,13 @@ CREATE DATABASE dataBaseTest;
 DROP TABLE IF EXISTS users;
 CREATE TABLE IF NOT EXISTS users (
                             Id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-                            firstname VARCHAR(50) NOT NULL,
-                            lastname VARCHAR(50) NOT NULL,
-                            phonenumber VARCHAR(50) NOT NULL,
-                            address VARCHAR(50) NOT NULL,
-                            city VARCHAR(50) NOT NULL,
-                            country VARCHAR(50) NOT NULL,
-                            email VARCHAR(50) NOT NULL UNIQUE);
+                            firstname VARCHAR(100) NOT NULL,
+                            lastname VARCHAR(100) NOT NULL,
+                            phonenumber VARCHAR(100) NOT NULL,
+                            address VARCHAR(100) NOT NULL,
+                            city VARCHAR(100) NOT NULL,
+                            country VARCHAR(200) NOT NULL,
+                            email VARCHAR(100) NOT NULL UNIQUE);
 
 -- connect or use the database
 \c databasetest
@@ -30,3 +30,6 @@ CREATE TABLE IF NOT EXISTS users (
 
 -- describe table
 \d users
+
+heroku addons:create heroku-postgresql:hobby-dev
+

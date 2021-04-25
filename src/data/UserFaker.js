@@ -7,7 +7,7 @@ const fs = require('fs');
 function userData() {
 var user = [];
 
-    for (let id = 1 ; id <= 200 ; id++)
+    for (let id = 1 ; id <= 500 ; id++)
     {
         /* create name */
         const firstname = faker.name.firstName();
@@ -33,7 +33,7 @@ var user = [];
         })
     }
 
-    return { data };
+    return { data: user };
 
 }
 
