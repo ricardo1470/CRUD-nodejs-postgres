@@ -3,19 +3,39 @@
         <div class="col-md-9 col-md-offset-2">
             <div class="table table-bordered table-hober">
                 <thead>
-                    <tr> 
-                        <th>n°</th>
-                        <th>Firts Name</th>
-                        <th>Last Name</th>
-                        <th>Phone Number</th>
-                        <th>Address</th>
-                        <th>City</th>
-                        <th>Country</th>
-                        <th>Email</th>
-                        <th>Actions</th>
+                    <tr>
+                        <th scope="col">n°</th>
+                        <th scope="col">Firts Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">City</th>
+                        <th scope="col">Country</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Actions</th>
                     </tr>
                 </thead>
+                <br>
                 <tbody>
+                    <% if (data) { %>
+                        <% for(var i = 0; i < data.length; i++) { %>
+                        <tr>
+                            <td><%= (i + 1) %></td>
+                            <td><%= data[i].firstname %></td>
+                            <td><%= data[i].lastname %></td>
+                            <td><%= data[i].phonenumber %></td>
+                            <td><%= data[i].address %></td>
+                            <td><%= data[i].city %></td>
+                            <td><%= data[i].country %></td>
+                            <td><%= data[i].email %></td>
+                            <td>
+                                <a href="/update/<%= data[i].id %>" class="btn btn-info">Edit</a>
+                                <a href="/delete/<%= data[i].id %>" class="btn btn-danger">Delete</a>
+                                <br>
+                            </td>
+                        </tr>
+                        <% } %>
+                    <% } %>
                 </tbody>
             </div>
         </div>

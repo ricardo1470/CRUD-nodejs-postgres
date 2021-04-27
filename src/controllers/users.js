@@ -15,8 +15,8 @@ const pool = new Pool({
 const getusers = async (req, res) => {
     const response = await pool.query('SELECT * FROM users');
     //res.json(response.rows);
-    res.render('users.html', { title: '@Ricardo1470' });
-    console.log(response);
+    res.render('users.html', { title: '@Ricardo1470', data: response.rows });
+    //console.log(response);
 };
 
 const getuserbyid = async (req, res) => {
@@ -29,10 +29,9 @@ const getuserbyid = async (req, res) => {
 
 const createuser = async (req, res) => {
     const { firstname, lastname, phonenumber, address, city, country, email } = req.body;
-    console.log(req.body);
     const response = await pool.query('INSERT INTO users (firstname, lastname, phonenumber, address, city, country, email) VALUES ($1, $2, $3, $4, $5, $6, $7)',[firstname, lastname, phonenumber, address, city, country, email]);
     console.log(response.rows);
-    res.render('users.html', { title: '@Ricardo1470' });
+    res.render('users.html', { title: '@Ricardo1470', data: response.rows });
     //res.json({
     //    message: 'User Added successfully',
     //    body: {
