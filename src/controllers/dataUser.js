@@ -34,6 +34,8 @@ const storeFileIntoDB = async (res, req) => {
         }
     } catch (error) {
         console.log(error);
+    } finally {
+        client.end();
     }
 };
 

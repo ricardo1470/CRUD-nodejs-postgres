@@ -1,0 +1,36 @@
+<table class="table table-bordered table-hober text-center">
+    <thead>
+        <tr>
+            <th scope="col">n°</th>
+            <th scope="col">Firts Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Address</th>
+            <th scope="col">City</th>
+            <th scope="col">Country</th>
+            <th scope="col">Email</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <br>
+    <tbody>
+        <% if (data) { %>
+            <% for(var i = 0; i < data.length; i++) { %>
+            <tr>
+                <td><%= (i + 1) %></td>
+                <td><%= data[i].firstname %></td>
+                <td><%= data[i].lastname %></td>
+                <td><%= data[i].phonenumber %></td>
+                <td><%= data[i].address %></td>
+                <td><%= data[i].city %></td>
+                <td><%= data[i].country %></td>
+                <td><%= data[i].email %></td>
+                <td>
+                    <a href="/" type="submit" class="btn btn-outline-primary" >Home</a>
+                    <br>
+                </td>
+            </tr>
+            <% } %>
+        <% } %>
+    </tbody>
+</table>

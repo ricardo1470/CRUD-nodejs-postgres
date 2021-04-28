@@ -1,17 +1,13 @@
 <div class="container">
-    <div class="row mt-5">
+    <div class="row mt-4">
         <div class="col-md-9 col-md-offset-2">
-            <div class="table table-bordered table-hober">
+            <table class="table table-bordered table-hober text-center">
                 <thead>
                     <tr>
                         <th scope="col">n°</th>
                         <th scope="col">Firts Name</th>
                         <th scope="col">Last Name</th>
                         <th scope="col">Phone Number</th>
-                        <th scope="col">Address</th>
-                        <th scope="col">City</th>
-                        <th scope="col">Country</th>
-                        <th scope="col">Email</th>
                         <th scope="col">Actions</th>
                     </tr>
                 </thead>
@@ -24,23 +20,20 @@
                             <td><%= data[i].firstname %></td>
                             <td><%= data[i].lastname %></td>
                             <td><%= data[i].phonenumber %></td>
-                            <td><%= data[i].address %></td>
-                            <td><%= data[i].city %></td>
-                            <td><%= data[i].country %></td>
-                            <td><%= data[i].email %></td>
                             <td>
-                                <a href="/update/<%= data[i].id %>" class="btn btn-info">Edit</a>
-                                <a href="/delete/<%= data[i].id %>" class="btn btn-danger">Delete</a>
+                                <a href="/view" class="btn  btn-outline-success btn-sm">View</a>
+                                <a href="/update/<%= data[i].id %>" class="btn  btn-outline-info btn-sm">Edit</a>
+                                <a href="/delete/<%= data[i].id %>" class="btn btn-outline-danger btn-sm">Delete</a>
                                 <br>
                             </td>
                         </tr>
                         <% } %>
                     <% } %>
                 </tbody>
-            </div>
+            </table>
         </div>
 
-        <div class="col-md-3 col-md-offset-2">
+        <div class="col-md-3 col-md-offset-2 mt-4">
             <div class="card">
                 <div class="card-body">
                     <form action="/users" method="post">
@@ -75,6 +68,7 @@
                             <button type="submit" class="btn btn-outline-primary">Save User</button>
                     </form>
                 </div>
+                <a href="/" type="submit" class="btn btn-outline-primary" >Home</a>
             </div>
         </div>
     </div>

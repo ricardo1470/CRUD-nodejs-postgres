@@ -14,17 +14,12 @@ const pool = new Pool({
 
 const getusers = async (req, res) => {
     const response = await pool.query('SELECT * FROM users');
-    //res.json(response.rows);
     res.render('users.html', { title: '@Ricardo1470', data: response.rows });
-    //console.log(response);
 };
 
-const getuserbyid = async (req, res) => {
-    const id = req.params.id;
-    const response = await pool.query('SELECT * FROM users WHERE id = $1', [id]);
-    //res.render('users.html', { title: '@Ricardo1470' });
-    res.json(response.rows);
-    console.log(response.rows);
+const getinfo = async (req, res) => {
+    const response = await pool.query('SELECT * FROM users');
+    res.render('allinfo.html', { title: '@Ricardo1470', data: response.rows });
 };
 
 const createuser = async (req, res) => {
@@ -40,19 +35,23 @@ const createuser = async (req, res) => {
     //})
 };
 
+const getuserbyid = async (req, res) => {
+    const id = req.params.id;
+    const response = await pool.query('SELECT * FROM users WHERE id = $1', [id]);
+    res.render('view.html', { title: '@Ricardo1470', data: response.rows[0] });
+};
+
 const updateuser = async (req, res) => {
     const id = req.params.id;
     const { firstname, lastname, phonenumber, address, city, country, email } = req.body;
     const response = await pool.query('UPDATE users SET firstname = $1, lastname = $2, phonenumber = $3, address = $4, city = $5, country = $6, email = $7 WHERE id = $8', [firstname, lastname, phonenumber, address, city, country, email, id]);
-    res.render('users.html', { title: '@Ricardo1470' });
-    console.log('User Updated Successfully', response);
-    //res.json('User Updated Successfully');
-    //res.redirect('/')
+    res.render('index.html', { title: '@Ricardo1470' });
 };
 
 const deleteuser = async (req, res) => {
     const id = req.params.id;
-    await pool.query('DELETE FROM users where id = $1', [id]);
+    const response = await pool.query('DELETE FROM users WHERE id = $1', [id]);
+    res.render('index.html', { title: '@Ricardo1470' });
     console.log(`User ${id} deleted Successfully`);
 };
 
@@ -63,6 +62,7 @@ const deleteallusers = async (req, res) => {
 
 module.exports = {
     getusers,
+    getinfo,
     getuserbyid,
     createuser,
     updateuser,

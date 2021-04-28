@@ -7,7 +7,7 @@ const router = Router();
 const { getinit } = require('../controllers/init')
 const { storeFileIntoDB } = require('../controllers/dataUser');
 /*users */
-const { getusers, createuser, getuserbyid, updateuser, deleteuser, deleteallusers } = require('../controllers/users');
+const { getusers, getinfo, createuser, getuserbyid, updateuser, deleteuser, deleteallusers } = require('../controllers/users');
 
 /* init */
 router.get('/', getinit);
@@ -16,10 +16,11 @@ router.get('/data', storeFileIntoDB);
 
 /*users */
 router.get('/users', getusers);
-router.get('/users/:id', getuserbyid);
+router.get('/view', getinfo);
+router.get('/update/:id', getuserbyid);
 router.post('/users', createuser);
-router.put('/users/:id', updateuser);
-router.delete('/users/:id', deleteuser);
+router.post('/update/:id', updateuser);
+router.get('/delete/:id', deleteuser);
 router.delete('/users', deleteallusers);
 
 
