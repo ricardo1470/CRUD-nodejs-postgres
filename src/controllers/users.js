@@ -6,10 +6,10 @@ const { Pool } = require('pg');
 
 /* connection with the database */
 const pool = new Pool({
-    host: 'localhost' || 'ec2-54-167-152-185.compute-1.amazonaws.com',
-    user: 'postgres' || 'pdnofntdxgbymn',
-    database: 'databasetest' || 'd68rat9eifbpva',
-    password: 'admin' || 'ee557f99f15a489543b073eaf72798c9d9b26609ef1f218372b80540a89db051'
+    host: 'localhost' || 'ec2-34-225-103-117.compute-1.amazonaws.com',
+    user: 'postgres' || 'cwmkuncbpbmsjr',
+    database: 'databasetest' || 'd5i8ea6g4flv0r',
+    password: 'admin' || '517b5b65563b652f24661ae4ac7aadb4c6dba517cbdd8a57f2f0ea8da2240394'
 });
 
 const getusers = async (req, res) => {
