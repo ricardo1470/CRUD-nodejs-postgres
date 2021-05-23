@@ -6,6 +6,8 @@
 const { Pool } = require('pg');
 /* use module nodejs fs to read files */
 const fs = require('fs');
+const path = require('path');
+
 
 /* connection with the database */
 const pool = new Pool({
@@ -21,10 +23,10 @@ const pool = new Pool({
 
 const storeFileIntoDB = async (res, req) => {
     try {
-        const rawdata = fs.readFileSync('src/data/userDataGenerate.json');
-        const users = JSON.parse(rawdata);
-
-        for (const user of users.data) {
+        //const open = fs.open(path.join(__dirname, '../src/data.json'))
+        const rawdata = fs.readFileSync('src/controllers/data.json');
+        const  { data: users } = JSON.parse(rawdata);
+        for (const user of users) {
             console.log(user);
             const  {firstname, lastname, phonenumber, address, city, country, email} = user;
             const response = await pool.query
@@ -34,8 +36,6 @@ const storeFileIntoDB = async (res, req) => {
         }
     } catch (error) {
         console.log(error);
-    } finally {
-        client.end();
     }
 };
 

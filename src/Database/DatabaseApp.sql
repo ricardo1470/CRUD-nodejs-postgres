@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS users (
                             address VARCHAR(100) NOT NULL,
                             city VARCHAR(100) NOT NULL,
                             country VARCHAR(200) NOT NULL,
-                            email VARCHAR(100) NOT NULL UNIQUE);
+                            email VARCHAR(100) NOT NULL);
 
 -- connect or use the database
 \c databasetest

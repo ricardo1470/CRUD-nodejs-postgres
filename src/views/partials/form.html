@@ -3,7 +3,7 @@
         <div class="col-md-9 col-md-offset-2">
             <table class="table table-bordered table-hober text-center">
                 <thead>
-                    <tr>
+                    <tr class="table-dark">
                         <th scope="col">n°</th>
                         <th scope="col">Firts Name</th>
                         <th scope="col">Last Name</th>
@@ -15,7 +15,7 @@
                 <tbody>
                     <% if (data) { %>
                         <% for(var i = 0; i < data.length; i++) { %>
-                        <tr>
+                        <tr class="table-dark">
                             <td><%= (i + 1) %></td>
                             <td><%= data[i].firstname %></td>
                             <td><%= data[i].lastname %></td>

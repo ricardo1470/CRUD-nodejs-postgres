@@ -4,11 +4,31 @@
 <%- include('partials/head.html') %>
 </head>
 <body>
-    <div>
-        <%- include('partials/nav.html') %>
-        <h3>Update User</h3>
-        <hr>
-        <a href="/users" type="submit" class="btn btn-outline-primary" >Save User</a>
+    <%- include('partials/nav.html') %>
+    <div class="container">
+        <div class="card border-info text-white bg-dark mb-3 mt-3" style="max-width: 20rem;">
+            <div class="card-header">Create User</div>
+            <div class="card-body">
+                <h4 class="card-title">Space to create user</h4>
+                <a href="/users" type="submit" class="btn btn-outline-primary" >Save User</a>
+            </div>
+        </div>
+
+        <div class="card border-info text-white bg-dark mb-3 mt-2" style="max-width: 20rem;">
+            <div class="card-header">Create Data</div>
+            <div class="card-body">
+                <h4 class="card-title">Create Data Test</h4>
+                <a href="/create" type="submit" class="btn btn-outline-primary" >Save Data</a>
+            </div>
+        </div>
+
+        <div class="card border-info text-white bg-dark mb-3 mt-2" style="max-width: 20rem;">
+            <div class="card-header">Update DataBase</div>
+            <div class="card-body">
+                <h4 class="card-title">Add Data Test to DataBase</h4>
+                <a href="/data" type="submit" class="btn btn-outline-primary" >Save Data</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>

@@ -3,6 +3,7 @@
 /* import faker */
 const faker = require('faker');
 const fs = require('fs');
+const path = require('path');
 
 function userData() {
 var user = [];
@@ -36,11 +37,15 @@ var user = [];
     return { data: user };
 
 }
+//console.log(userData);
+const getdata = (req, res) => {
+    const userDataGenerate = userData();
+    fs.writeFileSync((path.join(__dirname ,'data.json')), JSON.stringify(userDataGenerate, null, '\t'), function (err) {
+        if (err) throw err;
+    });
+    res.render('create.html', { title: '@Ricardo1470', message: "The data has successfully! View it at 'data.json'"});
+}
 
-const userDataGenerate = userData();
-fs.writeFileSync('userDataGenerate.json', JSON.stringify(userDataGenerate, 'utf8', '\t'), function (err) {
-    if (err) {
-        return console.log(err);
-    }
-    console.log("The data has successfully! View it at 'userDataGenerate.json'");
-});
+module.exports = {
+    getdata
+}

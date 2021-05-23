@@ -12,7 +12,7 @@
 * `npm run dev`
 
 ## start postgres shell
-* `psql -h localhost -U postgres, sudo -u postgres psql`
+* `sudo -u postgres psql`
 * `pass= root`
 
 ## Basic postgres commands
