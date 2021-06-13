@@ -8,6 +8,9 @@
 * `sudo apt install postgresql postgresql-contrib`
 * `sudo service postgresql start [stop, status, reload, restart]`
 
+## version postgresql
+`sudo -u postgres psql -c "SELECT version();"`
+
 ## rum server in dev
 * `npm run dev`
 
