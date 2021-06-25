@@ -1,3 +1,8 @@
+> # CRUD-nodejs_postgresql
+---
+<a href="personal logo"><img src="https://github.com/ricardo1470/ricardo1470/blob/master/img/Backend.png" align="middle" width="1000" height="600"></a>
+---
+
 > # <a href="url"><img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" align="middle" width="100" height="60"></a> DataBase
 ---
 ## Install from package.json
@@ -46,7 +51,7 @@ this project was built in: `Nodejs`, `ejs`, `Express`, `PostgreSQL`, `Faker`
 ---
 
 ## License
-*<a href="url"><img src="https://www.apsl.net/media/apslweb/images/postgresql-logo.width-900.png" align="middle" width="100" height="60"></a>`DataBase` is open source and therefore free to download and use without permission.*
+*<a href="url"><img src="https://www.apsl.net/media/apslweb/images/postgresql-logo.width-900.png" align="middle" width="100" height="60"></a>`CRUD-nodejs_postgresql` is open source and therefore free to download and use without permission.*
 
 <a href="url"><img src="https://www.holbertonschool.com/holberton-logo.png" align="middle" width="100" height="30"></a>
 
