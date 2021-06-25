@@ -30,7 +30,8 @@
 * `\timing`: Show query timing stats
 ---
 > ## Built with
-this project was built in: `Nodejs`, `ejs`, `Express`, `PostgreSQL`
+this project was built in: `Nodejs`, `ejs`, `Express`, `PostgreSQL`, `Faker`
+
 
 ---
 > ## Expressions of Gratitude
