@@ -28,6 +28,19 @@
 * `\df`: List functions
 * `\dv`: List views
 * `\timing`: Show query timing stats
+---
+> ## Built with
+this project was built in: `Nodejs`, `ejs`, `Express`, `PostgreSQL`
+
+---
+> ## Expressions of Gratitude
+---
+* `Tell others about this project`
+* `invite you for a beer` 🍺 `or a coffee` ☕
+---
+> ## Contact 💬
+> Ricardo Camayo
+### | [twitter](https://twitter.com/RICARDO1470) | [linkedin](https://www.linkedin.com/in/ricardo-alfonso-camayo/) | [mail](1466@holbertonschool.com) | [github](https://github.com/ricardo1470/README/blob/master/README.md) |
 
 ---
 
