@@ -56,9 +56,7 @@ this project was built in: `Nodejs`, `ejs`, `Express`, `PostgreSQL`, `Faker`
 | [<img src="https://github.com/ricardo1470/MEVN/blob/main/src/public/images/GitHub.png" alt="Github logo" width="34">](https://github.com/ricardo1470/README/blob/master/README.md) | [<img src="https://github.com/ricardo1470/MEVN/blob/main/src/public/images/email.png" alt="email logo" height="32">](mailto:ricardo.alfonso.camayo@gmail.com) | [<img src="https://github.com/ricardo1470/MEVN/blob/main/src/public/images/linkedin-icon.png" alt="Linkedin Logo" width="32">](https://www.linkedin.com/in/ricardo-alfonso-camayo/) | [<img src="https://github.com/ricardo1470/MEVN/blob/main/src/public/images/twitter.png" alt="Twitter Logo" width="30">](https://twitter.com/RICARDO1470) |
 |:---:|:---:|:---:|:---:|
 
-<a href="https://frontend.code-inspector.com/public/user/github/ricardo1470">
-   <img src="https://code-inspector.com/public/badge/user/github/ricardo1470?style=dark" alt="code inspector badge" />
-</a>
+
 
 </div>
 
