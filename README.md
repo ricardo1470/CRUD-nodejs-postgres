@@ -57,7 +57,7 @@ this project was built in: `Nodejs`, `ejs`, `Express`, `PostgreSQL`, `Faker`
 |:---:|:---:|:---:|:---:|
 
 <a href="https://frontend.code-inspector.com/public/user/github/ricardo1470">
-   <img src="https://code-inspector.com/public/badge/user/github/ricardo1470?style=dark" alt="code inspector badge" />
+   <img src="https://code-inspector.com/public/badge/user/github/ricardo1470?style=light" alt="code inspector badge" />
 </a>
 
 </div>
