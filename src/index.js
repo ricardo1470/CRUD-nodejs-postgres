@@ -3,7 +3,7 @@
 
 /* import express */
 const express = require('express');
-const { urlencoded } = require('express');
+//const { urlencoded } = require('express');
 /* import cors */
 var cors = require('cors');
 /* import morgan */
@@ -48,7 +48,7 @@ app.use(function(req, res, next) {
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function(err, req, res) {
     // set locals, only providing error in development
     res.locals.message = err.message;
     res.locals.error = req.app.get('env') === 'development' ? err : {};
@@ -65,7 +65,7 @@ app.listen(port, function () {
 
 // process terminated
 process.on('SIGTERM', () => {
-  server.close(() => {
+  app.close(() => {
     console.log('Process terminated')
   })
 });
