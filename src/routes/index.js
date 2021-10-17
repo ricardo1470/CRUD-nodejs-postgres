@@ -23,5 +23,4 @@ router.get('/delete/:id', deleteuser);
 router.delete('/users', deleteallusers);
 router.get('/create', getdata);
 
-
 module.exports = router;

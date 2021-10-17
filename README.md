@@ -8,7 +8,7 @@
 
 > # <a href="url"><img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" align="middle" width="100" height="60"></a> DataBase
 ---
-## Install from package.json
+## Install From Package.json
 * `npm i`
 
 ## Install PostgreSQL
@@ -16,17 +16,20 @@
 * `sudo apt install postgresql postgresql-contrib`
 * `sudo service postgresql start [stop, status, reload, restart]`
 
-## version postgresql
+## Version Postgresql
 `sudo -u postgres psql -c "SELECT version();"`
 
-## rum server in dev
+## Rum Server in Dev
 * `npm run dev`
 
-## start postgres shell
+## Start Postgres Shell
 * `sudo -u postgres psql`
 * `pass= root`
 
-## Basic postgres commands
+## Set Password
+* `ALTER USER postgres WITH PASSWORD 'root';`
+
+## Basic Postgres Commands
 * `\q`: Quit
 * `\c` __database__: Connect to a database
 * `\d` __table__: Show table definition including triggers

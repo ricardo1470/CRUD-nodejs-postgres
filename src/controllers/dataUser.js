@@ -11,10 +11,10 @@ const path = require('path');
 
 /* connection with the database */
 const pool = new Pool({
-    host: 'localhost' || 'ec2-34-225-103-117.compute-1.amazonaws.com',
-    user: 'postgres' || 'cwmkuncbpbmsjr',
-    database: 'databasetest' || 'd5i8ea6g4flv0r',
-    password: 'admin' || '517b5b65563b652f24661ae4ac7aadb4c6dba517cbdd8a57f2f0ea8da2240394'
+    host: 'localhost',
+    user: 'postgres',
+    database: 'databasetest',
+    password: 'root'
 });
 
 /* function that reads file userDataGenerate  and stores
