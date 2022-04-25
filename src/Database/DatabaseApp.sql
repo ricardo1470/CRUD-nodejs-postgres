@@ -1,8 +1,7 @@
 -- script that create Database
 -- of your Postgres server.
 DROP DATABASE IF EXISTS dataBaseTest;
-CREATE DATABASE dataBaseTest;
-    WITH OWNER postgres;
+CREATE DATABASE dataBaseTest WITH OWNER postgres;
 
 --show databases
 \l

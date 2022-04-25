@@ -2,11 +2,11 @@
   "name": "portaleducativo",
   "version": "1.0.0",
   "description": "Technical Test",
-  "main": "index.js",
+  "main": "./src/app.js",
   "scripts": {
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
-    "dev": "nodemon src",
-    "start": "node src"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose=true --collectCoverage=true",
+    "dev": "nodemon src/app.js",
+    "start": "node src/app.js"
   },
   "repository": {
     "type": "git",
